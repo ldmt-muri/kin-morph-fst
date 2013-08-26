@@ -1,0 +1,139 @@
+define Vowel [a | e | i | o | u];
+define Cons [b | c | d | f | g | h | j | k | l | m | n | p | q | r | s | t | v | w | x | y | z];
+
+# U~W: 'u' becomes 'w' before vowels
+define UtoW u -> w || _ %^ Vowel;
+
+# I~Y: 'i' becomes 'y' before vowels
+define ItoY i -> y ||  _ %^ Vowel;
+
+# Reflexive I: The 'i' in the reflexive prefix become 'iy' before vowels
+define RefI i -> [i y] || _ %$ Vowel;
+
+# N~H: 'nh' becomes 'mp'
+define NHtoMP [n %^ h] -> [m p];
+
+# AI~E: 'ai' becomes 'e' 
+define AItoE [a %^ i] -> [e | i];
+
+# VowelHiatus: Delete 'a' before a vowel at morpheme boundaries
+define VowelHiatus a -> 0 || _ %^ Vowel;
+
+# NasAssim: 'n' becomes 'm' before bilabials
+define NasAssim n -> m || _ %^ [b | f | m | p | v];
+
+# R~D: 'r' becomes 'd' after 'n'
+define RtoD r -> d || n %^ _;
+
+# Apposition
+define PrepRule [Vowel %&] -> %';
+
+# Special Passive -- if verb stem ends with b, the passive ending is -yw-, not -w-
+define BPass %# -> y || b _ w;
+
+# K~G: 'k' usually becomes 'g' if next consonant is c, f, h, p, s, t, or k.
+define KtoG k -> [g | k]  ||  _ Vowel %^ [c | f | h | p | s | t | k];
+
+# K~C: 'k' becomes 'c' before y
+define KtoC k -> c ||  _ y;
+
+# Y~W: 'y' may go away before 'w' (as often occurs with passive, perfect constructs) (Not entirely sure about this one)
+define YW y -> [0 | y] || _ %#;
+
+# T~D: 't' usually becomes 'd' if next consonant is c, f, h, p, s, t, or k.
+define TtoD t -> [d | t] ||  _ Vowel %^ [c | f | h | p | s | t | k];
+
+# R~L: 'r' and 'l' are interchangeable in many words of foreign origin. The Lexicon only uses 'r', so this factors that in (This has been commented out due to the huge ambiguity created.)
+#define RtoL r -> [r | l];
+
+# Cleanup 1: Remove $ (reflexive tag)
+define Cleanup1 %$ -> 0;
+
+# Cleanup 2: Remove # (passive tag)
+define Cleanup2 %# -> 0;
+
+# Cleanup 3: Remove & (contraction tag)
+define Cleanup3 %& -> 0;
+
+# Cleanup 4: Remove ^ (generic morpheme boundary tag)
+define Cleanup4 %^ -> 0;
+
+read lexc kinyaLex.lexc
+define Lexicon;
+
+
+# A~I~U: If next-to-last syllable of verb stem has a, i, or u as vowel, then suffix will contain i. Otherwise, e.
+define Verb $["+V"] .o. Lexicon;
+define Lexicon ~$["+V"] .o. Lexicon;
+define AIU i -> e || [e | o] [Cons | Cons Cons] %^ _;
+define Verb Verb .o. AIU;
+define Verb Verb .o. AIU;
+define Verb Verb .o. AIU;
+define Verb Verb .o. AIU;
+define Lexicon Lexicon | Verb;
+
+# Past Habitual: Must have both +HAB.PAST tags in order to work
+define PastHab $["+HAB.PAST"] .o. Lexicon;
+define PastHab2 $["+HAB.PAST2"] .o. Lexicon;
+define Lexicon ~$["+HAB.PAST"] .o. Lexicon;
+define Lexicon ~$["+HAB.PAST2"] .o. Lexicon;
+define PastHab PastHab & PastHab2;
+define Lexicon Lexicon | PastHab;
+
+# Perfect: Only can be perfective aspect if stative, recent, remote, or immediate past tense (and vice versa--those tenses must be perfect)
+define Perfect $["+PERF"] .o. Lexicon;
+define Lexicon ~$["+PERF"] .o. Lexicon;
+define ContinuousPerf $["+CONT"] .o. Perfect;
+define RecentPast $["+RCT.PAST"] .o. Perfect;
+define Lexicon ~$["+RCT.PAST"] .o. Lexicon;
+define RemotePast $["+RMT.PAST"] .o. Perfect;
+define Lexicon ~$["+RMT.PAST"] .o. Lexicon;
+define ImmediatePast $["+IMM.PAST"] .o. Perfect;
+define Lexicon ~$["+IMM.PAST"] .o. Lexicon;
+define Stative $["+PRES.STAT.HAB"] .o. Perfect;
+define StativeProg $["+PRES.STAT.PROG"] .o. Perfect;
+define Stative Stative | StativeProg;
+define Lexicon ~$["+PRES.STAT.HAB"] .o. Lexicon;
+define Lexicon ~$["+PRES.STAT.PROG"] .o. Lexicon;
+define Past RecentPast | RemotePast;
+define Past Past | ImmediatePast;
+define Past Past | Stative;
+define Past Past | ContinuousPerf;
+define Lexicon Lexicon | Past;
+
+
+# Allows proper nouns not to follow orthographic rules (since they may be foreign)
+define Proper $["+PROPER"] .o. Lexicon;
+ 
+define Grammar Lexicon           .o.
+	       AItoE			.o.
+	       RefI			.o.
+	       Cleanup1			.o.
+	       VowelHiatus			.o.
+	       PrepRule		.o.
+               KtoG			.o.
+               UtoW       .o.
+               ItoY              .o.
+               NHtoMP              .o.
+                KtoC			.o.
+                TtoD			.o.
+		NasAssim		.o.
+		RtoD			.o.
+		YW                      .o.
+		BPass			.o.
+		Cleanup2		.o.
+		Cleanup3		.o.
+		Cleanup4;			
+
+define Grammar Grammar | Proper;
+
+# English: The following three lines allow any English words to be recognized and tagged as such. You may or may not want this feature; if not, just comment out this section.
+# The creator of the word list requires the following to be displayed: Copyright © J Ross Beresford 1993-1999. All Rights Reserved. The following restriction is placed on the use of this publication: if the UK Advanced Cryptics Dictionary is used in a software package or redistributed in any form, the copyright notice must be prominently displayed and the text of this document must be included verbatim. There are no other restrictions: I would like to see the list distributed as widely as possible.
+read lexc enWords.lexc
+define EnglishLexicon;
+define Grammar Grammar | EnglishLexicon;
+
+
+regex Grammar;
+
+

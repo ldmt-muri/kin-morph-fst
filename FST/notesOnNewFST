@@ -1,0 +1,29 @@
+Files in this folder:
+    mudasobwa.foma: old FST
+    kin.lexc: old Lexicon
+    
+    kinyaFST.foma: new FST without guesses
+    kinyLex.lexc: new Lexicon without guesses
+    
+    guessFST.foma: new FST with guesses
+    guessLexc.lexc: new Lexicon with guesses
+    
+    enWords.lexc: lexicon of English words
+    
+    verbExtraction.java: example of extracting words from the Kinyarwanda dictionary on GitHub
+
+Notes on possible weaknesses and inaccuracies of the FST:
+    -The FST only allows for 3 objects and 4 applicative endings per verb. It would be easy to add more, however.
+    -There are some grammatical features which are uncertain to me because of limited resources about Kinyarwanda:
+        -It may be possible to have a perfect verb with no tense marker (as is possible for imperfect, present habitual)
+        -I am not at all sure whether conditional verbs and defective verbs are treated correctly.
+        -Imperatives: After looking at a lot of example Kinyarwanda text, I believe that the imperative form of a verb
+          is just the infinitive minus the ku- or gu- prefix. However, this has not been added to the FST because I 
+          found no resources to back this up.
+        -Some verb morphemes are only attested in one of my sources (Kimenyi's Relational Grammar of Kinyarwanda).
+          These features include: the ni- conditional prefix, the ta- conditional negative prefix,
+          and the na- morpheme for also
+          
+An excellent resource for info about the language is the reference section in kinyarwanda.net
+
+If you have any questions, feel free to email me at jabberwock@pittsburghplan.com or richard.mccoy@yale.edu

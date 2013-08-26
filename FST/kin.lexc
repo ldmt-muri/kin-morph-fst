@@ -1,0 +1,1886 @@
+!!! kin.lexc - Lexicon File for 'Mudasobwa' Kinyarwanda Transducer !!!
+
+Multichar_Symbols
+	+CL1 +CL1or3 +CL2 +CL3 +CL4 +CL5 +CL6 +CL7 +CL8 +CL9or10 +CL9 CL1%0 +CL11 +CL12 +CL13 +CL14 +CL15 +CL16 +BEN +INSTorCAUS +RECIP +PASS +IMP +PERF +LOC +INF +NOT.YET +RMT.PAST +RCT.PAST +PRES +FUT +ALSO +STILL +NEG +REFL +UNK1 +UNK2 +UNK3 +UNK4 +UNK6 +UNK7 +UNK8 +UNK +IMPER CL1or3.of CL2.of CL4or6or9.of CL5.of CL7.of CL8.of CL1%0.of CL11.of CL12.of CL13.of CL14.of CL15.of CL16.of CL1or3.for CL2.for CL4or6or9.for CL5.for CL7.for CL8.for CL1%0.for CL11.for CL12or15.for CL13.for CL14.for CL16.for CL1or3.DIST CL2.DIST CL4.DIST CL5.DIST CL6.DIST CL7.DIST CL8.DIST CL9.DIST CL1%0.DIST CL11.DIST CL12.DIST CL13.DIST CL14.DIST CL15.DIST CL16.DIST CL4or9-those.of CL8-those.of CL1or3.PROX CL4or9.PROX CL2.PROX CL5.PROX CL6.PROX CL7.PROX CL8.PROX CL9.PROX CL1%0.PROX CL11.PROX CL12.PROX CL13.PROX CL14.PROX CL15.PROX CL16.PROX CL1or3.DIST2 CL2.DIST2 CL7.DIST2 CL8.DIST2 CL14.DIST2 CL15.DIST2 CL15.IMMED COP COP.LOC INF.COP
+
+LEXICON Root
+ 
+Noun;
+Adjective;
+Verb;
+AdverbHelper;
+FunctionHelper;
+Numeral;
+Symbol;
+UnparsedHelper;
+
+LEXICON Numeral
+
++:0	Numerals;
+
+LEXICON Numerals
+
+%0	Numerals;
+1	Numerals;
+2	Numerals;
+3	Numerals;
+4	Numerals;
+5	Numerals;
+6	Numerals;
+7	Numerals;
+8	Numerals;
+9	Numerals;
++NUM:0	#;
+
+LEXICON Symbol
+
++:0	Symbols;
+
+LEXICON Symbols
+
+%'	Symbols;
+%.	Symbols;
+%?	Symbols;
+%!	Symbols;
+%,	Symbols;
+%@	Symbols;
+%;	Symbols;
+%/	Symbols;
+%:	Symbols;
+%(	Symbols;
+%)	Symbols;
+%«	Symbols;
+%»	Symbols;
+%œ	Symbols;
+%"	Symbols;
+%'	Symbols;
+%;	Symbols;
+%-	Symbols;
++PUNC:0	#;
+ 
+LEXICON Noun
+
++N+CL1or3:umu^  NounRootHelper;
++N+CL1or3:mu^	  NounRootHelper;
++N+CL2:aba^  NounRootHelper;
++N+CL2:ba^   NounRootHelper;
++N+CL4:imi^  NounRootHelper;
++N+CL4:mi^   NounRootHelper;
++N+CL5:i^    NounRootHelper;
++N+CL6:ama^  NounRootHelper;
++N+CL6:ma^   NounRootHelper;
++N+CL6:am^   NounRootHelper;
++N+CL7:iki^  NounRootHelper;
++N+CL7:igi^  NounRootHelper;
++N+CL7:ki^   NounRootHelper;
++N+CL7:gi^   NounRootHelper;
++N+CL7:icy^  NounRootHelper;
++N+CL8:ibi^  NounRootHelper;
++N+CL8:bi^   NounRootHelper;
++N+CL9:in^   NounRootHelper;
++N+CL9:n^	   NounRootHelper;
++N+CL9:m^	   NounRootHelper;
++N+CL9:im^   NounRootHelper;
++N+CL1%0:uru^ NounRootHelper;
++N+CL1%0:ru^ NounRootHelper;
++N+CL12:aka^ NounRootHelper;
++N+CL12:aga^ NounRootHelper;
++N+CL13:utu^ NounRootHelper;
++N+CL14:ubu^ NounRootHelper;
++N+CL14:bu^ NounRootHelper;
++N+CL15:uku^ NounRootHelper;
++N+CL16:aha^ NounRootHelper;
++N+CL16:ha^ NounRootHelper;
++N:0	ProperNounHelper;
++PN:0	PronounHelper;
+LoanHelper;
+OtherHelper;
+
+LEXICON Adjective
+
++ADJ+1SG:n^		AdjStemHelper;
++ADJ+1PL:tu^	AdjStemHelper;
++ADJ+1PL:tw^	AdjStemHelper;
++ADJ+2SG:u^		AdjStemHelper;
++ADJ+2SG:w^		AdjStemHelper;
++ADJ+2PL:mu^	AdjStemHelper;
++ADJ+CL1:a^		AdjStemHelper;
++ADJ+CL1:y^		AdjStemHelper;
++ADJ+CL2:ba^	AdjStemHelper;
++ADJ+CL2:b^	AdjStemHelper;
++ADJ+CL4:mi^	AdjStemHelper;
++ADJ+CL5:ri^	AdjStemHelper;
++ADJ+CL7:ci^	AdjStemHelper;
++ADJ+CL7:ki^	AdjStemHelper;
++ADJ+CL7:gi^	AdjStemHelper;
++ADJ+CL8:bi^	AdjStemHelper;
++ADJ+CL9or1%0:i^		AdjStemHelper;
++ADJ+CL9or1%0:e^		AdjStemHelper;
++ADJ+CL14:bu^	AdjStemHelper;
++ADJ+CL16:ha^	AdjStemHelper;
++ADJ+UNK1:zi^	AdjStemHelper;
++ADJ+UNK2:za^	AdjStemHelper;
++ADJ+UNK3:ru^	AdjStemHelper;
++ADJ+UNK4:yi^	AdjStemHelper;
++ADJ+UNK6:ma^	AdjStemHelper;
++ADJ+UNK7:mpa^	AdjStemHelper;
++ADJ+UNK8:ni^	AdjStemHelper;
++ADJ+IMPER:du^	AdjStemHelper;
++ADJ+INF:ku^	AdjStemHelper;
++ADJ+INF:gu^	AdjStemHelper;
++ADJ+INF:kw^	AdjStemHelper;
++ADJ:0		AdjStemHelper;
+
+LEXICON Verb
+
++NEG+V:nti	VerbSubjComp;
++NEG+V:nt	VerbSubjComp;
++NEG+V:si	VerbSubjComp;
++V:0		VerbSubjComp;
++V:0		Copula;
+
+LEXICON Copula
+
++ni:ni		#;
++niho:niho		#;
++kuri:kuri		#;
++hari:hari		#;
++kuba:kuba		#;
++NEG:nti	CopSubjComp;
++NEG:nt		CopSubjComp;
++NEG:si		CopSubjComp;
+CopSubjComp;
+
+LEXICON CopSubjComp
+
++1SG:n^		CopPostSubj;
++1PL:tu^	CopPostSubj;
++2SG:u^		CopPostSubj;
++2PL:mu^	CopPostSubj;
++CL1:a^		CopPostSubj;
++CL2:ba^	CopPostSubj;
++CL4:mi^	CopPostSubj;
++CL5:ri^	CopPostSubj;
++CL7:ci^	CopPostSubj;  ! ki?
++CL8:bi^	CopPostSubj;
++CL9:i^		CopPostSubj;
++CL1%0:i^	CopPostSubj;
++CL14:bu^	CopPostSubj;
++CL16:ha^	CopPostSubj;
++UNK1:zi^	CopPostSubj;
++UNK2:za^	CopPostSubj;
++UNK3:ru^	CopPostSubj;
++UNK4:yi^	CopPostSubj;
++UNK6:ma^	CopPostSubj;
++UNK7:mpa^	CopPostSubj;
++UNK8:ni^	CopPostSubj;
++IMPER:du^	CopPostSubj;
++INF:ku^	CopPostSubj;
++INF:gu^	CopPostSubj;
++INF:kw^	CopPostSubj;
+
+LEXICON CopPostSubj
+
++STILL:racya^	CopRestricted;
+CopRestricted;
+
+LEXICON CopRestricted
+
++ari:ari		VerbLoc;
++ri:ri		VerbLoc;
+
+LEXICON VerbSubjComp
+
++1SG:n^		VerbPostSubj;
++1PL:tu^	VerbPostSubj;
++1PL:tw^	VerbPostSubj;
++2SG:u^		VerbPostSubj;
++2SG:w^		VerbPostSubj;
++2PL:mu^	VerbPostSubj;
++CL1:a^		VerbPostSubj;
++CL1:y^		VerbPostSubj;
++CL2:ba^	VerbPostSubj;
++CL2:ab^	VerbPostSubj;
++CL2:b^		VerbPostSubj;
++CL4:mi^	VerbPostSubj;
++CL5:ri^	VerbPostSubj;
++CL7:ci^	VerbPostSubj;
++CL7:ki^	VerbPostSubj;
++CL7:gi^	VerbPostSubj;
++CL8:bi^	VerbPostSubj;
++CL9or1%0:i^		VerbPostSubj;
++CL9or1%0:e^		VerbPostSubj;
++CL14:bu^	VerbPostSubj;
++CL16:ha^	VerbPostSubj;
++UNK1:zi^	VerbPostSubj;
++UNK2:za^	VerbPostSubj;
++UNK3:ru^	VerbPostSubj;
++UNK4:yi^	VerbPostSubj;
++UNK6:ma^	VerbPostSubj;
++UNK7:mpa^	VerbPostSubj;
++UNK8:ni^	VerbPostSubj;
++IMPER:du^	VerbPostSubj;
++INF:ku^	VerbPostSubj;
++INF:gu^	VerbPostSubj;
++INF:kw^	VerbPostSubj;
+VerbPostSubj;
+
+LEXICON VerbPostSubj
+
++NOT.YET:ta^	VerbStill;
+VerbStill;
+
+LEXICON VerbStill
+
++STILL:racya^	VerbTense;
+VerbTense;
+
+LEXICON VerbTense
+
++RMT.PAST:da^	VerbAlso;
++RMT.PAST:ara^	VerbAlso;
++RMT.PAST:ta^	VerbAlso;
++RCT.PAST:a^	VerbAlso;
++PRES:ra^		VerbAlso;
++FUT:za^		VerbAlso;
+VerbAlso;
+
+LEXICON VerbAlso
+
++ALSO:na^	VerbObj;
+VerbObj;
+
+LEXICON VerbObj
+
++1SG:n^		VerbObj;
++1SG:ni^	VerbObj;
++1PL:ku^	VerbObj;
++1PL:tu^	VerbObj;
++1PL:du^	VerbObj;
++1PL:t^		VerbObj;
++2SG:mu^	VerbObj;
++2SG:mw^	VerbObj;
++2SG:um^	VerbObj;
++CL2:ba^	VerbObj;
++CL7:ki^	VerbObj;
++CL7:gi^	VerbObj;
++CL8:bi^	VerbObj;
++CL8:by^	VerbObj;
++CL8:byi^	VerbObj;
++CL12:ka^	VerbObj;
++CL14:bu^	VerbObj;
++UNK4:yi^	VerbObj;
++UNK5:cya^	VerbObj;
++UNK:ga^	VerbObj;
++UNK:gu^	VerbObj;
+VerbRefl;
+
+LEXICON VerbRefl
+
++REFL:i^	VerbStemHelper;
++REFL:yi^	VerbStemHelper;
+VerbStemHelper;
+
+LEXICON IrrVerbStem
+
+ri		VerbLoc;
+riri	VerbLoc;
+hari	VerbLoc;
+bizi	VerbLoc;
+kiyiri	VerbLoc;
+tazi	VerbLoc;
+muzi	VerbLoc;
+wari	VerbLoc;
+
+LEXICON VerbStemHelper
+
++:0		VerbStem;
+
+LEXICON VerbStem
+
+IrrVerbStem;
+zi		VerbLoc;
+ti		VerbLoc;
+itw		VerbAppl;
+kab			VerbAppl;
+vuts		VerbAppl;
+vuk		VerbAppl;
+vuki			VerbAppl;
+rek		VerbAppl;
+baz		VerbAppl;
+fit			VerbAppl;
+tang		VerbAppl;
+tangi		VerbAppl;
+v		VerbAppl;
+ibuk			VerbAppl;
+hanur		VerbAppl;
+hanu		VerbAppl;
+maz		VerbAppl;
+ganir		VerbAppl;
+gani			VerbAppl;
+bon		VerbAppl;
+tah		VerbAppl;
+tind		VerbAppl;
+tinz				VerbAppl;
+bag				VerbAppl;
+hit		VerbAppl;
+his			VerbAppl;
+hot				VerbAppl;
+pit				VerbAppl;
+bwir		VerbAppl;
+bwi		VerbAppl;
+gez		VerbAppl;
+umv		VerbAppl;
+duh		VerbAppl;
+hit		VerbAppl;
+his		VerbAppl;
+rag		VerbAppl;
+sohok		VerbAppl;
+komang		VerbAppl;
+z		VerbAppl;
+aj		VerbAppl;
+kingur		VerbAppl;
+komer		VerbAppl;
+kome		VerbAppl;
+jy		VerbAppl;
+gi		VerbAppl;
+bon		VerbAppl;
+umiw		VerbAppl;
+jy		VerbAppl;
+hish		VerbAppl;
+shak		VerbAppl;
+mv		VerbAppl;
+yobe		VerbAppl;
+itw		VerbAppl;
+tw		VerbAppl;
+bic		VerbAppl;
+gera		VerbAppl;
+shak		VerbAppl;
+ger		VerbAppl;
+kund		VerbAppl;
+meny		VerbAppl;
+ba		VerbAppl;
+giz		VerbAppl;
+jyan		VerbAppl;
+bat		VerbAppl;
+rind		VerbAppl;
+rangir		VerbAppl;
+tureb		VerbAppl;
+pf		VerbAppl;
+pfu		VerbAppl;
+bon		VerbAppl;
+her		VerbAppl;
+ter		VerbAppl;
+manuk		VerbAppl;
+manuts		VerbAppl;
+bes			VerbAppl;
+tum		VerbAppl;
+tumy		VerbAppl;
+zan			VerbAppl;
+pur		VerbAppl;
+sang		VerbAppl;
+sanz		VerbAppl;
+kin				VerbAppl;
+shuhuj			VerbAppl;
+subir			VerbAppl;
+ba		VerbAppl;
+ic		VerbAppl;
+tangiri		VerbAppl;
+ziran		VerbAppl;
+vug			VerbAppl;
+hungir		VerbAppl;
+genz		VerbAppl;
+uhagarar		VerbAppl;
+iburangir		VerbAppl;
+cecek		VerbAppl;
+vug		VerbAppl;
+rokots		VerbAppl;
+kanjy		VerbAppl;
+rangiriz		VerbAppl;
+komez		VerbAppl;
+kic		VerbAppl;
+duha		VerbAppl;
+kora		VerbAppl;
+turem		VerbAppl;
+haguruk		VerbAppl;
+gomb		VerbAppl;
+here		VerbAppl;
+akor		VerbAppl;
+itaremer		VerbAppl;
+igend		VerbAppl;
+rwany		VerbAppl;
+akorer		VerbAppl;
+kanavug		VerbAppl;
+veg		VerbAppl;
+heb		VerbAppl;
+mugor		VerbAppl;
+ken		VerbAppl;
+hur		VerbAppl;
+tishim		VerbAppl;
+nyish		VerbAppl;
+geragez		VerbAppl;
+twifuriza		VerbAppl;
+shakish		VerbAppl;
+ikanant		VerbAppl;
+byak		VerbAppl;
+bur		VerbAppl;
+nyoroher		VerbAppl;
+kiri		VerbAppl;
+igufash		VerbAppl;
+gendan		VerbAppl;
+gend		VerbAppl;
+byakiri		VerbAppl;
+tagi		VerbAppl;
+ikanamfash		VerbAppl;
+pora		VerbAppl;
+utorosh		VerbAppl;
+yambabaj		VerbAppl;
+renz		VerbAppl;
+ihwany		VerbAppl;
+garuk		VerbAppl;
+mura		VerbAppl;
+cy		VerbAppl;
+bonek		VerbAppl;
+kabyit		VerbAppl;
+abwit		VerbAppl;
+rwara		VerbAppl;
+kubitan		VerbAppl;
+tsinz		VerbAppl;
+suzum		VerbAppl;
+subi		VerbAppl;
+vuz		VerbAppl;
+babar		VerbAppl;
+shobor		VerbAppl;
+ishyu		VerbAppl;
+gakurikir		VerbAppl;
+kurikij		VerbAppl;
+onger		VerbAppl;
+tumy		VerbAppl;
+ber		VerbAppl;
+shan		VerbAppl;
+gomb		VerbAppl;
+huz		VerbAppl;
+gatsind		VerbAppl;
+boney		VerbAppl;
+tsind		VerbAppl;
+shanw		VerbAppl;
+ndik		VerbAppl;
+ririmb		VerbAppl;
+nkoror		VerbAppl;
+som		VerbAppl;
+azi		VerbAppl;
+hay		VerbAppl;
+yam		VerbAppl;
+shyushy		VerbAppl;
+sagar		VerbAppl;
+reka		VerbAppl;
+bita		VerbAppl;
+tanir		VerbAppl;
+tah		VerbAppl;
+komang		VerbAppl;
+kome		VerbAppl;
+tuganiriz		VerbAppl;
+rirwany		VerbAppl;
+reb		VerbAppl;
+meny		VerbAppl;
+taha		VerbAppl;
+kubwir		VerbAppl;
+gahit		VerbAppl;
+sezer		VerbAppl;
+ang		VerbAppl;
+hager		VerbAppl;
+hagez		VerbAppl;
+gum		VerbAppl;
+ray		VerbAppl;
+vuy		VerbAppl;
+tey		VerbAppl;
+bish		VerbAppl;
+torok		VerbAppl;
+hung		VerbAppl;
+hungi		VerbAppl;
+shoboy		VerbAppl;
+ruk		VerbAppl;
+sahura		VerbAppl;
+ran		VerbAppl;
+wic		VerbAppl;
+yerek		VerbAppl;
+tanz		VerbAppl;
+hagarari		VerbAppl;
+mpamagar 		VerbAppl;
+rongo		VerbAppl;
+guhish		VerbAppl;
+pish		VerbAppl;
+siga		VerbAppl;
+shij		VerbAppl;
+twa		VerbAppl;
+ntwa		VerbAppl;
+pasang		VerbAppl;
+kabash		VerbAppl;
+hangan		VerbAppl;
+orosh		VerbAppl;
+kir		VerbAppl;
+kagend		VerbAppl;
+z		VerbAppl;
+tuvur		VerbAppl;
+besh		VerbAppl;
+rangiy		VerbAppl;
+hamy		VerbAppl;
+ibasi		VerbAppl;
+sobanuk		VerbAppl;
+ras		VerbAppl;
+ci		VerbAppl;
+hang		VerbAppl;
+komej		VerbAppl;
+vaz		VerbAppl;
+gufash		VerbAppl;
+rago		VerbAppl;
+kerets		VerbAppl;
+norosh		VerbAppl;
+beshy		VerbAppl;
+shim		VerbAppl;
+iteguy		VerbAppl;
+kene		VerbAppl;
+injir		VerbAppl;
+itegur		VerbAppl;
+irukank		VerbAppl;
+tekerez		VerbAppl;
+igoy		VerbAppl;
+babaj		VerbAppl;
+bar		VerbAppl;
+rangij		VerbAppl;
+icar		VerbAppl;
+ig		VerbAppl;
+shbok		VerbAppl;
+gut		VerbAppl;
+barar		VerbAppl;
+kek		VerbAppl;
+mez		VerbAppl;
+bah		VerbAppl;
+tem		VerbAppl;
+rubak		VerbAppl;
+rer		VerbAppl;
+got		VerbAppl;
+emey		VerbAppl;
+gahur		VerbAppl;
+ubak		VerbAppl;
+gater		VerbAppl;
+gusang		VerbAppl;
+gakomez		VerbAppl;
+nahab		VerbAppl;
+humur 		VerbAppl;
+fungur 		VerbAppl;
+it 		VerbAppl;
+koz		VerbAppl;
+kor		VerbAppl;
+goy 		VerbAppl;
+rer 		VerbAppl;
+tig 		VerbAppl;
+rir 		VerbAppl;
+kagumy		VerbAppl;
+keney		VerbAppl;
+nyurany		VerbAppl;
+gahind		VerbAppl;
+tir		VerbAppl;
+h		VerbAppl;
+hab		VerbAppl;
+gasang		VerbAppl;
+kurikij		VerbAppl;
+cik		VerbAppl;
+fash		VerbAppl;
+fat		VerbAppl;
+gihumek		VerbAppl;
+eger		VerbAppl;
+ganiriz		VerbAppl;
+kicay		VerbAppl;
+raraguz		VerbAppl;
+king		VerbAppl;
+rashir		VerbAppl;
+kabij		VerbAppl;
+shiz		VerbAppl;
+komok		VerbAppl;
+saz		VerbAppl;
+witw		VerbAppl;
+witonz		VerbAppl;
+sigar		VerbAppl;
+haguruts		VerbAppl;
+sigar		VerbAppl;
+icay		VerbAppl;
+paguruk		VerbAppl;
+zur		VerbAppl;
+ntsek		VerbAppl;
+huriy		VerbAppl;
+nsets		VerbAppl;
+sobanuz		VerbAppl;
+twar		VerbAppl;
+herekej		VerbAppl;
+shyira		VerbAppl;
+boh		VerbAppl;
+pang		VerbAppl;
+hagarar		VerbAppl;
+ish		VerbAppl;
+vuy		VerbAppl;
+rut		VerbAppl;
+shobok		VerbAppl;
+nsobanuriy		VerbAppl;
+aram		VerbAppl;
+ganririy		VerbAppl;
+rwan		VerbAppl;
+gir		VerbAppl;
+twar		VerbAppl;
+ongey		VerbAppl;
+nkurikir		VerbAppl;
+rush		VerbAppl;
+shakir		VerbAppl;
+rwan		VerbAppl;
+korer		VerbAppl;
+twar		VerbAppl;
+gir		VerbAppl;
+emerer		VerbAppl;
+merer		VerbAppl;
+maz		VerbAppl;
+hunz		VerbAppl;
+kanikang		VerbAppl;
+duhig		VerbAppl;
+mbuk		VerbAppl;
+uzur		VerbAppl;
+ubambuk		VerbAppl;
+sezey		VerbAppl;
+herej		VerbAppl;
+tiny		VerbAppl;
+ikunz		VerbAppl;
+imeny		VerbAppl;
+inginga		VerbAppl;
+rinz		VerbAppl;
+nkurikir		VerbAppl;
+nsobanuz		VerbAppl;
+ndekur		VerbAppl;
+funzw		VerbAppl;
+ngendekey		VerbAppl;
+nongey		VerbAppl;
+tiny		VerbAppl;
+pakir		VerbAppl;
+hamaz		VerbAppl;
+havuy		VerbAppl;
+nkurikir		VerbAppl;
+itunganyij		VerbAppl;
+oherej		VerbAppl;
+bimeny		VerbAppl;
+shyiriy		VerbAppl;
+oherez		VerbAppl;
+kurikir		VerbAppl;
+fung		VerbAppl;
+tagir		VerbAppl;
+tagend		VerbAppl;
+ndukany		VerbAppl;
+sur		VerbAppl;
+c		VerbAppl;
+hasanz		VerbAppl;
+rikang		VerbAppl;
+ganiriy		VerbAppl;
+hinduk		VerbAppl;
+utagir		VerbAppl;
+isongoy		VerbAppl;
+utagend		VerbAppl;
+tandukanye		VerbAppl;
+inkugum		VerbAppl;
+kijij		VerbAppl;
+seng		VerbAppl;
+babariy		VerbAppl;
+isahuy		VerbAppl;
+usigar		VerbAppl;
+yambar		VerbAppl;
+isek		VerbAppl;
+teker		VerbAppl;
+hinguk		VerbAppl;
+tuy		VerbAppl;
+tur		VerbAppl;
+ntwariy		VerbAppl;
+kampumuirz		VerbAppl;
+hashash		VerbAppl;
+hend		VerbAppl;
+mer		VerbAppl;
+tak		VerbAppl;
+gasab		VerbAppl;
+sab		VerbAppl;
+cogor		VerbAppl;
+kur		VerbAppl;
+komerets		VerbAppl;
+sash		VerbAppl;
+tek		VerbAppl;
+twicaz		VerbAppl;
+nir		VerbAppl;
+ibuyerek		VerbAppl;
+ikumv		VerbAppl;
+humuriz		VerbAppl;
+cunz		VerbAppl;
+rokok		VerbAppl;
+rambir		VerbAppl;
+shir		VerbAppl;
+kurikir		VerbAppl;
+abiterekej		VerbAppl;
+tanduk		VerbAppl;
+ras		VerbAppl;
+rash		VerbAppl;
+hong		VerbAppl;
+inuk		VerbAppl;
+nuk		VerbAppl;
+shakish		VerbAppl;
+gusohoy		VerbAppl;
+tay		VerbAppl;
+mwerek		VerbAppl;
+zamuk		VerbAppl;
+pagarik		VerbAppl;
+hangah		VerbAppl;
+sobanurir		VerbAppl;
+ugushakish		VerbAppl;
+fuk		VerbAppl;
+sag		VerbAppl;
+amus		VerbAppl;
+imwic		VerbAppl;
+umwic		VerbAppl;
+amwicaj		VerbAppl;
+sharij		VerbAppl;
+shyingur		VerbAppl;
+hanukir		VerbAppl;
+haborer		VerbAppl;
+tegerej		VerbAppl;
+bahim		VerbAppl;
+gusabiy		VerbAppl;
+nyandik		VerbAppl;
+tubyay		VerbAppl;
+byarany		VerbAppl;
+hamusang		VerbAppl;
+habay		VerbAppl;
+mfashij		VerbAppl;
+mpig		VerbAppl;
+remer		VerbAppl;
+dusak		VerbAppl;
+inginz		VerbAppl;
+fashij		VerbAppl;
+uhagij		VerbAppl;
+uramuk		VerbAppl;
+tashy		VerbAppl;
+handangiy		VerbAppl;
+hingukiy		VerbAppl;
+hamagar		VerbAppl;
+emerey		VerbAppl;
+fuy		VerbAppl;
+emer		VerbAppl;
+zakumbaz		VerbAppl;
+nyinjij		VerbAppl;
+nyinjiz		VerbAppl;
+nshyiz		VerbAppl;
+mwangij		VerbAppl;
+viyoy		VerbAppl;
+boz		VerbAppl;
+subiz		VerbAppl;
+senz		VerbAppl;
+koreshej		VerbAppl;
+ntangaj		VerbAppl;
+uk		VerbAppl;
+munshing		VerbAppl;
+hembuk		VerbAppl;
+zahay		VerbAppl;
+bajij		VerbAppl;
+kugora		VerbAppl;
+temerey		VerbAppl;
+shinz		VerbAppl;
+bohoz		VerbAppl;
+bohoj		VerbAppl;
+goseng		VerbAppl;
+shats		VerbAppl;
+rokora		VerbAppl;
+mukubis		VerbAppl;
+terur		VerbAppl;
+simbuka		VerbAppl;
+umvis		VerbAppl;
+gwiririy		VerbAppl;
+nyegerey		VerbAppl;
+ndamuts		VerbAppl;
+pung		VerbAppl;
+yumv		VerbAppl;
+gur		VerbAppl;
+giriy		VerbAppl;
+kurez		VerbAppl;
+batung		VerbAppl;
+kamump		VerbAppl;
+rump		VerbAppl;
+zibits		VerbAppl;
+mp		VerbAppl;
+imariy		VerbAppl;
+azimy		VerbAppl;
+vandim		VerbAppl;
+zimy		VerbAppl;
+suc		VerbAppl;
+imwis		VerbAppl;
+arerew		VerbAppl;
+kereka		VerbAppl;
+bidusobanuriy		VerbAppl;
+curuz		VerbAppl;
+tugur		VerbAppl;
+shumbits		VerbAppl;
+izamar		VerbAppl;
+marany		VerbAppl;
+gusov		VerbAppl;
+mumarir		VerbAppl;
+korey		VerbAppl;
+guhish		VerbAppl;
+nyinuby		VerbAppl;
+gemurir		VerbAppl;
+gacung		VerbAppl;
+rar		VerbAppl;
+shyiz		VerbAppl;
+berey		VerbAppl;
+hats		VerbAppl;
+cumuy		VerbAppl;
+vumw		VerbAppl;
+mump		VerbAppl;
+mumpay		VerbAppl;
+shyinguy		VerbAppl;
+bakuy		VerbAppl;
+huy		VerbAppl;
+hungaban		VerbAppl;
+bash		VerbAppl;
+tung		VerbAppl;
+rihir		VerbAppl;
+iyenstall		VerbAppl;
+sakuz		VerbAppl;
+siz		VerbAppl;
+yangirits		VerbAppl;
+pembw		VerbAppl;
+iyung		VerbAppl;
+kiyung		VerbAppl;
+sek		VerbAppl;
+banj		VerbAppl;
+kanakomez		VerbAppl;
+girik		VerbAppl;
+garur		VerbAppl;
+zim		VerbAppl;
+bamar		VerbAppl;
+remy		VerbAppl;
+kagishing		VerbAppl;
+ishimishij		VerbAppl;
+byay		VerbAppl;
+kurwaz		VerbAppl;
+shakiy		VerbAppl;
+karyam		VerbAppl;
+rway		VerbAppl;
+taniy		VerbAppl;
+nyic		VerbAppl;
+ricits		VerbAppl;
+dafit		VerbAppl;
+wamp		VerbAppl;
+ifuz		VerbAppl;
+tabishoboy		VerbAppl;
+kwitez		VerbAppl;
+rekur		VerbAppl;
+icishij		VerbAppl;
+izunguka		VerbAppl;
+ziz		VerbAppl;
+kuriy		VerbAppl;
+usab		VerbAppl;
+tsindagir		VerbAppl;
+itwaz		VerbAppl;
+iriz		VerbAppl;
+hig		VerbAppl;
+homby		VerbAppl;
+henz		VerbAppl;
+ririw		VerbAppl;
+funz		VerbAppl;
+sabonuj		VerbAppl;
+tekerej		VerbAppl;
+bujij		VerbAppl;
+pombej		VerbAppl;
+nyw		VerbAppl;
+ricits		VerbAppl;
+rot		VerbAppl;
+nyic		VerbAppl;
+irez		VerbAppl;
+bihorey		VerbAppl;
+bihorer		VerbAppl;
+bafunguy		VerbAppl;
+tarigez		VerbAppl;
+rekuy		VerbAppl;
+tarigez		VerbAppl;
+hamby		VerbAppl;
+hac		VerbAppl;
+hemukiran		VerbAppl;
+iyemerer		VerbAppl;
+byar		VerbAppl;
+kwiriy		VerbAppl;
+karih		VerbAppl;
+gahah		VerbAppl;
+nyorohey		VerbAppl;
+bumetiriz		VerbAppl;
+kuy		VerbAppl;
+waguh		VerbAppl;
+wucishij		VerbAppl;
+wuduh		VerbAppl;
+impay		VerbAppl;
+yirih		VerbAppl;
+hagum		VerbAppl;
+nyis		VerbAppl;
+shakishij		VerbAppl;
+sezerey		VerbAppl;
+toragur		VerbAppl;
+tumerey		VerbAppl;
+riz		VerbAppl;
+hemukiw		VerbAppl;
+nkurikira		VerbAppl;
+tang		VerbAppl;
+igaragamby	VerbAppl;
+
+LEXICON VerbAppl
+
++BEN:^ir			VerbAppl;
++BEN:^er			VerbAppl;
++RECIP:^an			VerbAppl;
++INSTorCAUS:^esh	VerbAppl;
++INSTorCAUS:^ish	VerbAppl;
+VerbPass;
+
+LEXICON VerbPass
+
++PASS:^w	VerbFinal;
+VerbFinal;
+
+LEXICON VerbFinal
+
++IMP:^a		VerbLoc;
++PERF:^e	VerbLoc;
++PERF:^ye	VerbLoc;
++IMP:^aga	VerbLoc;
+
+LEXICON VerbLoc
+
++LOC:^mo	#;
++LOC:^ho	#;
++LOC:^yo	#;
+#;
+
+LEXICON ProperNounHelper
+
++:0		ProperNoun;
+
+LEXICON ProperNoun
+
+uwimana% rishard	#;
+uwimana% richard	#;
+kigali	 		#;
+nyarugenge		#;
+nyakabanda		#;
+habyarimana		#;
+gitondo			#;
+imana			#;
+focas			#;
+john			#;
+bugesera		#;
+
+LEXICON PronounHelper
+
++:0		Pronoun;
+
+LEXICON Pronoun
+
+njyewe		#;
+njye		#;
+nabo		#;
+natwe		#;
+bo		#;
+tariki		#;
+wowe		#;
+we		#;
+ukwe		#;
+ukwabo		#;
+niwe		#;
+nabyo		#;
+nako		#;
+nakoze		#;
+niko		#;
+wenyine		#;
+jyenyine	#;
+
+LEXICON NounRootHelper
+
++:0		NounRoot;
+
+LEXICON NounRoot
+
+tari		#;
+aka		#;
+gabo		#;
+ana		#;
+ntu		#;
+dege		#;
+nsi		#;
+menyetso	#;
+vuga		#;
+go  		#;
+byeyi		#;
+goroba		#;
+nzu		#;
+kuru		#;
+ryo		#;
+he		#;
+renga		#;
+nywa  		#;
+sore		#;
+pamvu		#;
+teka		#;
+rongo		#;
+tutsi		#;
+koko		#;
+sazi		#;
+gihe		#;
+ezi		#;
+shyaka		#;
+oko		#;
+ndi		#;
+turanyi		#;
+oba		#;
+bunda		#;
+gerenade	#;
+koresho		#;
+shuti		#;
+wanyu		#;
+twaro		#;
+keya		#;
+ryango		#;
+faranga		#;
+horo		#;
+icanyi		#;
+cyenda		#;
+ihariko		#;
+unyarwanda	#;
+horo		#;
+tutsi		#;
+remwa		#;
+enge		#;
+remere		#;
+kiyihakana	#;
+nyarwanda	#;
+bantu		#;
+muntu		#;
+igend		#;
+tima		#;
+zima		#;
+zu		#;
+kino		#;
+yuma		#;
+twe		#;
+ganga		#;
+taro		#;
+mwe		#;
+ndi		#;
+nota		#;
+tonde		#;
+bazo		#;
+gore		#;
+pira		#;
+guru		#;
+hugu		#;
+kombe		#;
+tego		#;
+kinnyi		#;
+nzu		#;
+si		#;
+kumbi		#;
+kinyi		#;
+nya		#;
+toza		#;
+ongereza	#;
+pe		#;
+shuro		#;
+alimu		#;
+baruwa		#;
+karamu		#;
+shuri		#;
+na		#;
+tabo		#;
+shyitsi		#;
+hungu		#;
+kobwa		#;
+tanda		#;
+biyi		#;
+zi		#;
+tariki		#;
+pamvu		#;
+bunda		#;
+sukali		#;
+kozi		#;
+shiki		#;
+terahamwe	#;
+ti		#;
+gana		#;
+hutu		#;
+rambo		#;
+vure		#;
+shusho		#;
+gendo		#;
+cu		#;
+tambwe		#;
+egera		#;
+ri		#;
+jana		#;
+turnyi		#;
+shusho		#;
+pano		#;
+cazo		#;
+fubyi		#;
+ntui		#;
+gero		#;
+yaha		#;
+nyururu		#;
+aha		#;
+hinda 		#;
+pfakazi 	#;
+korwa		#;
+twali 		#;
+korwa		#;
+hanga		#;
+shobozi		#;
+cumu		#;
+jambo		#;
+ene		#;
+wacu		#;
+ce		#;
+ari		#;
+arimu		#;
+oko		#;
+rumuna		#;
+kotanyi		#;
+yenzi		#;
+protestati	#;
+pasiteri	#;
+odoka		#;
+nyeshuri	#;
+ami		#;
+gogwe		#;
+damu		#;
+wabo		#;
+tambara		#;
+sirikare	#;
+garagaro	#;
+we		#;
+zozi		#;
+hinduk		#;
+pyisi		#;
+zuru		#;
+zungu		#;
+babazi		#;
+raso		#;
+hande		#;
+enda		#;
+simba		#;
+koni		#;
+mama		#;
+genzi		#;
+giraneza	#;
+pangu		#;
+peruka		#;
+anya		#;
+saha		#;
+ndiho		#;
+ayi		#;
+huru		#;
+gufu		#;
+umweru		#;
+ahonga		#;
+vura		#;
+saya		#;
+suka		#;
+jepe		#;
+zayirwa		#;
+yisilamu	#;
+sengesho	#;
+handa		#;
+rundi		#;
+punzi		#;
+sa		#;
+cousine		#;
+toni		#;
+soni		#;
+suti		#;
+sinzi		#;
+kecuru		#;
+nani		#;
+hushya		#;
+gi		#;
+da		#;
+shinga		#;
+jisho		#;
+no		#;
+yungu		#;
+itwaza		#;
+ki		#;
+procedure	#;
+zina		#;
+ubahiro		#;
+responsabilités	#;
+kunga		#;
+hano		#;
+sebe		#;
+cyuma		#;
+dafites		#;
+hirwe		#;
+tege		#;
+zoga		#;
+hinja		#;
+kuta		#;
+pinja		#;
+ciro		#;
+saka		#;
+toki		#;
+rahomba		#;
+manza		#;
+hare		#;
+gongo		#;
+pfu		#;
+tangaje		#;
+ra		#;
+shingano	#;
+hango		#;
+tangaza		#;
+sasu		#;
+zara		#;
+
+LEXICON AdjStemHelper
+
++:0		AdjStem;
+
+LEXICON AdjStem
+
+ngahe		#;
+njye		#;
+nini		#;
+gomb		#;
+cu		#;
+acu		#;
+bi		#;
+ose		#;
+toya		#;
+anyu		#;
+awe		#;
+ebwe		#;
+mwe		#;
+biri		#;
+tatu		#;
+tanu		#;
+yepfo		#;
+anye		#;
+rwawe		#;
+rindwi		#;
+ose 		#;
+se 		#;
+ese 		#;
+rindwi		#;
+maze		#;
+kumi		#;
+munani		#;
+to		#;
+ndi		#;
+undi		#;
+acyo		#;
+enshi		#;
+rimi		#;
+itari		#;
+nye		#;
+aye		#;
+abo		#;
+bo		#;
+anyu		#;
+wawe		#;
+awe		#;
+inshi		#;
+ke		#;
+nyine		#;
+onyine		#;
+enshi		#;
+tandatu		#;
+ike		#;
+kari		#;
+ake		#;
+ije		#;
+eza		#;
+
+LEXICON LoanHelper
+
++:0		Loans;
+
+LEXICON Loans
+
+genocide 	#;
+jenocide 	#;
+genocida 	#;
+jenocida 	#;
+stuation 	#;
+stuatio 	#;
+saa 	#;
+radio 	#;
+perecida 	#;
+cartier 	#;
+familla 	#;
+guerra 	#;
+boutique 	#;
+mama 	#;
+papa 	#;
+maman 	#;
+mutila 	#;
+rafael 	#;
+manchester 	#;
+southampton 	#;
+brazil 	#;
+marlon 	#;
+harewood 	#;
+blackpool 	#;
+united 	#;
+dimitar 	#;
+berbatov 	#;
+javier 	#;
+hernandez 	#;
+premier 	#;
+league 	#;
+arsenal 	#;
+city 	#;
+chelsea 	#;
+alex 	#;
+ferguson 	#;
+fa 	#;
+ikipe 	#;
+cameroon 	#;
+nigeria 	#;
+itike 	#;
+perpetua 	#;
+nkwocha 	#;
+helen 	#;
+ukaonu 	#;
+ugochi 	#;
+oparanozie 	#;
+jeanette 	#;
+ngock 	#;
+guinee 	#;
+equatoriale 	#;
+yohani 	#;
+give 	#;
+neura 	#;
+gisagara 	#;
+arabiyi 	#;
+uwimana 	#;
+richard 	#;
+rishard 	#;
+annexe 	#;
+ok 	#;
+grand 	#;
+frere 	#;
+grenada 	#;
+maite 	#;
+jendarme 	#;
+parent 	#;
+batisimu 	#;
+barriere 	#;
+saint 	#;
+michel 	#;
+minsk 	#;
+bar 	#;
+jana 	#;
+secondaire 	#;
+documentation 	#;
+valeur 	#;
+jambo 	#;
+universte 	#;
+darfour 	#;
+barierre 	#;
+departement 	#;
+some  	#;
+time 	#;
+tromatisime 	#;
+capacite 	#;
+justice 	#;
+rescape 	#;
+film 	#;
+hotel 	#;
+directe 	#;
+juife 	#;
+viviría 	#;
+nutriré 	#;
+vírese 	#;
+népo 	#;
+commune 	#;
+sellule 	#;
+primaire 	#;
+3ième 	#;
+maîtresse 	#;
+secteur 	#;
+4ième 	#;
+famille 	#;
+immaculée 	#;
+munyensanga 	#;
+alivera 	#;
+jenoside 	#;
+mariya 	#;
+prezida 	#;
+w.c 	#;
+jules 	#;
+giramata 	#;
+mélanie 	#;
+mishove 	#;
+kiyovu 	#;
+hélène 	#;
+thérèse 	#;
+olivier 	#;
+sania 	#;
+andré 	#;
+ste 	#;
+chantal 	#;
+mutabazi 	#;
+frère 	#;
+petit 	#;
+mutoni 	#;
+gitarama 	#;
+direction 	#;
+'Concern' 	#;
+clodette 	#;
+kibuye 	#;
+chantal 	#;
+fiancé 	#;
+semaines 	#;
+micheveux 	#;
+butare 	#;
+orphelinat 	#;
+Alphred 	#;
+sœur 	#;
+bisesero 	#;
+cynthia 	#;
+s'installer 	#;
+hôtels 	#;
+occasion 	#;
+taxi 	#;
+volant 	#;
+point 	#;
+dégat 	#;
+listes 	#;
+quartier 	#;
+brigade 	#;
+directeur 	#;
+bariyeri 	#;
+docteur 	#;
+carrière 	#;
+'concern' 	#;
+cercle 	#;
+so 	#;
+sportif 	#;
+de 	#;
+petite 	#;
+soeur 	#;
+matélas 	#;
+capable 	#;
+hôtels 	#;
+situation 	#;
+cousine 	#;
+maitriser 	#;
+s'installer 	#;
+anniversaire 	#;
+sida 	#;
+solution 	#;
+stade 	#;
+cas 	#;
+si 	#;
+ront 	#;
+zone 	#;
+turquoise 	#;
+marier 	#;
+matelas 	#;
+agwa 	#;
+maudit 	#;
+douze 	#;
+ans 	#;
+bombi 	#;
+
+LEXICON OtherHelper
+
++:0		Other;
+
+LEXICON Other
+
+%08/%08/1979  	#;
+tsetse  	#;
+interahamye	#;
+sha  	#;
+budage 	#;
+afurika  	#;
+rushanwa 	#;
+iwacu 	#;
+kabusuzu 	#;
+munyagisenyi 	#;
+jean 	#;
+pierre 	#;
+adorphe 	#;
+gisimba 	#;
+neira 	#;
+ngubu 	#;
+rwibutso  	#;
+gisozi 	#;
+rwibutso 	#;
+rwanda  	#;
+kabusunzu  	#;
+gismba  	#;
+orpherna 	#;
+shusho 	#;
+nyina  	#;
+rusesabagina  	#;
+umulisa 	#;
+odette 	#;
+kamuhanda 	#;
+mathias 	#;
+nyiramatama 	#;
+yulida 	#;
+commune 	#;
+rubengera 	#;
+alfred 	#;
+edouard 	#;
+shumbusho 	#;
+musaza 	#;
+sogokuru 	#;
+ruhengeri 	#;
+gisenyi 	#;
+kibuye 	#;
+sogukuru 	#;
+kayove 	#;
+nkurutu 	#;
+zaire 	#;
+goma 	#;
+congo 	#;
+sulfo 	#;
+data 	#;
+rugunga 	#;
+odetta 	#;
+ode 	#;
+burundi 	#;
+violette 	#;
+orphelinats 	#;
+'concern' 	#;
+leta 	#;
+nyamirambo 	#;
+ruvumbu 	#;
+imburabuturo 	#;
+gacaca 	#;
+nyagasani 	#;
+nyogosenge 	#;
+
+LEXICON AdverbHelper
+
++ADV+:0		Adverb;
+
+LEXICON Adverb
+
+munsi 		#;
+mbere 		#;
+ntabwo 		#;
+nta 		#;
+hanze 		#;
+se 		#;
+nyine 		#;
+koko 		#;
+neza 		#;
+deja 		#;
+kera 		#;
+noneho 		#;
+cyane 		#;
+vuba 		#;
+he 		#;
+nde 		#;
+iki 		#;
+precisement 		#;
+inyuma 		#;
+imbere 		#;
+nyuma 		#;
+hasi 		#;
+kumwe 		#;
+ngaho 		#;
+murugo 		#;
+waho 		#;
+ngwino 		#;
+bene 		#;
+joro 		#;
+ijoro 		#;
+cyobo  		#;
+nanone 		#;
+gotera 		#;
+ngewe 		#;
+naho 		#;
+yaho 		#;
+hose 		#;
+yego  		#;
+ahandi  		#;
+hahandi  		#;
+ahubwo 		#;
+siwe 		#;
+kuki 		#;
+hanyuma 		#;
+ntacyo 		#;
+hafi 		#;
+yenda 		#;
+wenda 		#;
+nabi 		#;
+oya 		#;
+none 		#;
+hano 		#;
+nonese 		#;
+hoya 		#;
+ntaho 		#;
+kari 		#;
+imusozi 		#;
+musozi 		#;
+nuko 		#;
+ejo 		#;
+yine 		#;
+hariya 		#;
+asa 		#;
+hehe 		#;
+namwe 		#;
+sita 		#;
+uje 		#;
+ute 		#;
+ate 		#;
+kare 		#;
+
+LEXICON FunctionHelper
+
++:0		Function;
+
+LEXICON Function
+
+ariko+CONJ:ariko		#; !Conj
+na+CONJ:na		#; !Conj
+rero+CONJ:rero		#; !Conj
+cyangwa+CONJ:cyangwa		#; !Conj
+kugirango+CONJ:kugirango	#; !Conj
+no+CONJ:no			#; !Conj
+uko+REL:uko			#; !Rel
+kuko+REL:kuko		#; !Rel
+ngo+REL:ngo			#; !Rel
+nko+RELnko			#; !Rel
+ko+REL:ko			#; !Rel
+kubera+REL:kubera		#; !Rel
+yuko+REL:yuko		#; !Rel
+kandi+REL:kandi		#; !Rel
+i+P:i			#; !NoAgreePrep
+mu+P:mu			#; !NoAgreePrep
+muri+P:muri		#; !NoAgreePrep
+ku+P:ku			#; !NoAgreePrep
+kuri+P:kuri		#; !NoAgreePrep
+nka+P:nka			#; !NoAgreePrep
+mo+P:mo			#; !NoAgreePrep
+mwa+P:mwa			#; !NoAgreePrep
+ma+P:ma			#; !NoAgreePrep
+uwa+P:uwa			#; !NoAgreePrep
+ye+P:ye			#; !NoAgreePrep
+masaa+P:masaa		#; !NoAgreePrep
+n+P:n			#; !NoAgreePrep
+wa+P:wa		#; !AgreePrep
+ba+P:ba		#; !AgreePrep
+ya+P:ya		#; !AgreePrep
+rya+P:rya		#; !AgreePrep
+cya+P:cya	#; !AgreePrep
+bya+P:bya	#; !AgreePrep
+za+P:za		#; !AgreePrep
+rwa+P:rwa	#; !AgreePrep
+ka+P:ka		#; !AgreePrep
+twa+P:twa	#; !AgreePrep
+bwa+P:bwa	#; !AgreePrep
+kwa+P:kwa	#; !AgreePrep
+ha+P:ha		#; !AgreePrep
+wo+P:wo		#; !AgreePrep
+bo+P:bo		#; !AgreePrep
+yo+P:yo		#; !AgreePrep
+ryo+P:ryo	#; !AgreePrep
+cyo+P:cyo	#; !AgreePrep
+byo+P:byo	#; !AgreePrep
+zo+P:zo		#; !AgreePrep
+rwo+P:rwo	#; !AgreePrep
+ko+P:ko		#; !AgreePrep
+two+P:two	#; !AgreePrep
+bwo+P:bwo	#; !AgreePrep
+ho+P:ho		#; !AgreePrep
+iya+P:iya	#; !AgreePrep
+ibya+P:ibya	#; !AgreePrep
+uyu+D:uyu	#; !Det
+aba+D:aba	#; !Det
+iyi+D:iyi	#; !Det
+iri+D:iri	#; !Det
+aya+D:aya		#; !Det
+iki+D:iki		#; !Det
+ibi+D:ibi		#; !Det
+izi+D:izi		#; !Det
+uru+D:uru		#; !Det
+aka+D:aka		#; !Det
+utu+D:utu		#; !Det
+ubu+D:ubu		#; !Det
+uku+D:uku		#; !Det
+aha+D:aha		#; !Det
+uwo+D:uwo		#; !Det
+abo+D:abo		#; !Det
+iyo+D:iyo		#; !Det
+iryo+D:iryo		#; !Det
+ayo+D:ayo		#; !Det
+icyo+D:icyo		#; !Det
+ibyo+D:ibyo		#; !Det
+izo+D:izo		#; !Det
+urwo+D:urwo		#; !Det
+ako+D:ako		#; !Det
+utwo+D:utwo		#; !Det
+ubwo+D:ubwo		#; !Det
+uko+D:uko		#; !Det
+aho+D:aho		#; !Det
+rino+D:rino		#; !Det !not sure about this?
+bariya+D:bariya		#; !Det
+uriya+D:uriya		#; !Det
+kiriya+D:kiriya		#; !Det
+biriya+D:biriya		#; !Det
+buriya+D:buriya		#; !Det
+kuriya+D:kuriya		#; !Det
+
+LEXICON UnparsedHelper
+
++:0		Unparsed;
+
+LEXICON Unparsed
+
+byatunguranye	#;
+inyereka	#;
+ihari	#;
+ukirenza	#;
+akiri	#;
+karabaye	#;
+hagiye	#;
+bujya	#;
+duhunge	#;
+duhita	#;
+yahanuwa	#;
+nimugoroba	#;
+nibwo	#;
+mabi	#;
+bagirango	#;
+ibice	#;
+iburaho	#;
+buryo	#;
+wese	#;
+nemere	#;
+batari	#;
+nizo	#;
+nabwo	#;
+abanye	#;
+nabo	#;
+kanengewe	#;
+gusa	#;
+byayo	#;
+bwaryo	#;
+zabaye	#;
+never	#;
+agene	#;
+njyewe	#;
+kundi	#;
+dukwiye	#;
+wawe	#;
+agio	#;
+nabenshi	#;
+nayo	#;
+hagati	#;
+niyo	#;
+agateganyo	#;
+nibo	#;
+wabahuje	#;
+ava	#;
+virashoboka	#;
+kazi	#;
+08/08/1979	#;
+bwari	#;
+ngira	#;
+kwezi	#;
+yagaragaraga 	#;
+gikomeye 	#;
+mbiri	#;
+kabaye	#;
+ngumamo	#;
+ama	#;
+umu	#;
+hendamubwira	#;
+magana	#;
+nyamuha	#;
+nicyo	#;
+22/04/1994	#;
+nkirimo	#;
+gato	#;
+ebyiri	#;
+babanjye	#;
+hejuru	#;
+cubana	#;
+kujyayo	#;
+mazina	#;
+ritari	#;
+nyareba	#;
+nkubu	#;
+matota	#;
+ikibagoye	#;
+uwe 	#;
+ariwe	#;
+menshi	#;
+ngirabakunzi	#;
+washo	#;
+ntawe	#;
+nkiri	#;
+uziko	#;
+bagenzi	#;
+amezei	#;
+aziko	#;
+atari	#;
+ishashi	#;
+akampumuriza	#;
+irangamuntu	#;
+mpamara	#;
+ninde	#;
+kamwe	#;
+irangamuntu	#;
+tutakuzi	#;
+uwahe	#;
+da	#;
+ndiwe	#;
+utari	#;
+ngirango	#;
+haruguru	#;
+matiyasi	#;
+niwo	#;
+akarusho	#;
+kana	#;
+cyanee	#;
+gare	#;
+nguwo	#;
+yewe	#;
+aribwo	#;
+iyaba	#;
+uwundi	#;
+umwaye	#;
+imanza	#;
+abenshi	#;
+uwari	#;
+nyirakabano	#;
+karonkano	#;
+hango	#;
+udufaranga	#;
+karanyica	#;
+kwanyu	#;
+nijoro	#;
+ninjoro	#;
+cyubahiro	#;
+jisho	#;
+wagirango	#;
+akenshi	#;
+wande	#;
+mpande	#;
+gake	#;
+itwereke	#;
+kweri	#;
+ibenshy	#;
+baranzi	#;
+uwande	#;
+epfo	#;

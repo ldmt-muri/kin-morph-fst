@@ -1,0 +1,80 @@
+define Vowel [ a | e | i | o | u | A | E | I | O | U ];
+define Cons [ b | c | d | f | g | h | j | k | l | m | n | o | p | q | r | s | t | v | w | x | y | z ];
+ 
+# Cleanup: remove morpheme boundaries
+define Cleanup "^" -> 0;
+
+# U~W: 'u' becomes 'w' before vowels
+define UtoW u -> w || _ Vowel;
+
+# VowelHiatus: Delete 'a' before a vowel
+define VowelHiatus a -> 0 || _ Vowel;
+
+# I~Y: 'i' becomes 'y' in C_VC contexts
+define ItoY i -> y || Cons _ Vowel Cons;
+
+# NasAssim: 'n' becomes 'm' before bilabials
+define NasAssim n -> m || _ [p|b|f|v];
+
+# R~D: 'r' becomes 'd' after 'n'
+define RtoD r -> d || n _;
+
+# K~TS: 'k' becomes 'ts' between a vowel and 'e'
+#define KtoTS k -> t s || Vowel _ e;
+
+# R~Y: 'r' becomes 'y' before 'e'
+define RtoY r -> y || _ e;
+
+# Z~J: 'z' becomes 'j' before 'e'
+define ZtoJ z (->) j || _ e;
+
+# Appos
+define Appos [a | o] (->) %' || [Cons | y] _ .#. ;
+ 
+read lexc kin.lexc
+define Lexicon
+
+# Guessing Section ####################################
+
+define ClassMarkNoun [%+CL1or3:{umu^} | %+CL1or3:{mu^} | %+CL2:{aba^} | %+CL2:{ba^} | %+CL4:{imi^} | %+CL4:{mi^} | %+CL5:{i^} | %+CL6:{ama^} | %+CL6:{ma^} | %+CL6:{am^} | %+CL7:{iki^} | %+CL7:{igi^} | %+CL7:{ki^} | %+CL7:{gi^} | %+CL7:{icy^} | %+CL8:{ibi^} | %+CL8:{bi^} | %+CL9:{in^} | %+CL9:{n^} | %+CL9:{m^} | %+CL9:{im^} | %+CL1%0:{uru^} | %+CL1%0:{ru^} | %+CL12:{aka^} | %+CL12:{aga^} | %+CL13:{utu^} | %+CL14:{ubu^} | %+CL14:{bu^} | %+CL15:{uku^} | %+CL16:{aha^} | %+CL16:{ha^}];
+
+define ClassMarkVerbSub [%+1SG:{n^} | %+1PL:{tu^} | %+1PL:{tw^} | %+2SG:{u^} | %+2SG:{w^} | %+2PL:{mu^} | %+CL1:{a^} | %+CL1:{y^} | %+CL2:{ba^} | %+CL2:{b^} | %+CL4:{mi^} | %+CL5:{ri^} | %+CL7:{ci^} | %+CL7:{ki^} | %+CL7:{gi^} | %+CL8:{bi^} | %+CL9or1%0:{i^} | %+CL9or1%0:{e^} | %+CL14:{bu^} | %+CL16:{ha^} | %+UNK1:{zi^} | %+UNK2:{za^} | %+UNK3:{ru^} | %+UNK4:{yi^} | %+UNK6:{ma^} | %+UNK7:{mpa^} | %+UNK8:{ni^} | %+IMPER:{du^} | %+INF:{ku^} | %+INF:{gu^} | %+INF:{kw^}];
+
+define ClassMarkVerbObj [%+1SG:{n^} | %+1SG:{ni^} | %+1PL:{ku^} | %+1PL:{tu^} | %+1PL:{du^} | %+1PL:{t^} | %+2SG:{mu^} | %+2SG:{mw^} | %+2SG:{um^} | %+CL2:{ba^} | %+CL7:{ki^} | CL7:{gi^} | %+CL8:{bi^} | %+CL8:{by^} | %+CL8:{byi^} | %+CL12:{ka^} | %+CL14:{bu^} | %+UNK4:{yi^} | %+UNK5:{cya^} | %+UNK:{ga^} | %+UNK:{gu^}];
+
+define GuessedNoun ClassMarkNoun %+:0 [Vowel|Cons]+;
+
+define GuessedVerb ([%+NEG:{nti^} | %+NEG:{si^} | %+NEG:{nt^}]) (ClassMarkVerbSub) (%+NOT%.YET:{ta^}) (%+STILL:{racya^}) ([%+RMT%.PAST:{da^} | %+RMT%.PAST:{ara^} | %+RMT%.PAST:{ta^} | %+RCT%.PAST:{a^} | %+PRES:{ra^} | %+FUT:{za^}]) (%+ALSO:{na^}) ClassMarkVerbObj* ([%+REFL:{i^} | %+REFL:{yi^}]) %+:0 [Vowel|Cons]+ [%+BEN:{^ir} | %+BEN:{^er} | %+RECIP:{^an} | %+INSTorCAUS:{^esh} | %+INSTorCAUS:{^ish}]* (%+PASS:{^w}) [%+IMP:{^a} | %+PERF:{^e} | %+PERF:{^ye} | %+IMP:{^aga}] ([%+LOC:{^mo} | %+LOC:{^ho} | %+LOC:{^yo}]);
+
+define Guessed GuessedVerb .P. GuessedNoun;
+
+#######################################################
+ 
+define Grammar Lexicon           .o. 
+               Cleanup           .o.
+               VowelHiatus       .o.
+               ItoY              .o.
+               UtoW              .o.
+               NasAssim          .o.
+               RtoD				.o.
+				RtoY			.o.
+				ZtoJ			.o.
+				Appos;
+
+define GuessedGrammar Guessed          .o. 
+               Cleanup           .o.
+               ItoY              .o.
+               UtoW              .o.
+               NasAssim          .o.
+               RtoD				.o.
+				RtoY			.o.
+				ZtoJ			.o.
+				Appos;
+
+define Guessing Grammar .P. [GuessedGrammar .o. ~Grammar.l];
+
+define Anything %+:0 ?+;
+
+define Out Guessing .P. [Anything .o. ~Guessing];
+
+regex Out;
